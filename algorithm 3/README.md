@@ -92,8 +92,19 @@ Function findIntersection(slots1, slots2):
                 intersection.append([start, end])
     
     Return intersection
-End Function
+    End Function
 
 Efficiency analysis
 
-    
+
+ -  when sorting in n elements division splits into halves
+ -  the depth d of the recursion tree can be derived from 
+    2^d = n
+    which changes to 
+    d = log_2(n)
+
+
+
+ -  merging sorted subarrays takes O(n) time
+
+ - (log(n)* n) = O(nlogn)
