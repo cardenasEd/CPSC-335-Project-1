@@ -1,0 +1,66 @@
+//Project 1
+Algorithm 1: Connecting Pairs of Persons
+
+Problem: Find the minimum number of swaps needed to arrange couples sitting in a 
+row such that each couple is seated next to each other. Each couple is represented by 
+two consecutive integers, and a swap involves exchanging the positions of any two individuals
+in the row.
+
+Input:
+  array [integers] - representing the seating arrangement of individuals. 
+        - Variable name: seatArrangment
+  integer - holds the total number of seats in the row 
+        - Varaible name: numSeats
+
+Output:
+  integer - the minimum number of swaps needed to arrange the couples
+
+	
+Constraints and Assumptions:
+  - seatArrangement holds positive integers
+  - seatArrangement does not contain any repeat values
+  - seatArrangement only holds values that are consecutive no skipping in numbers
+
+
+
+
+Function connectCouples(int personNumber[], int numSeats)
+	findValue = int;		//holds the couple needed to be found
+	tempValue = int;		//holds the value of individual that will be swapped
+	totalSwaps = int; 		//holds the total number of swaps done
+	if seatArrangement is 0
+		return 0
+
+	for index i from 0 to numSeats -1:
+		if individual value is even
+			the findValue is the individual value + 1
+		else 
+			the findValue is the individual value - 1
+
+		if value of seatArrangement[i + 1] is equal to the findValue
+		or value of seatArrangement[i - 1] is equal to the findValue
+			continue to the next value of the index
+
+		for index j from i + 1 to numSeats - 1:
+			if value of index j is equal to findValue
+        set tempValue equal to seatArrangement[i + 1]
+        set seatArrangement[i + 1] 	equal to seatArrangement [i]
+        set seatArrangement[i] equal to the tempValue
+        increment the number of swaps by 1
+        exit this loop
+
+    return the value of totalSwaps
+		
+	
+
+Efficiency Analysis:
+  - The nested for loop in the function is O(n)
+  - The outer for loop in the function is O(n)
+  - All other lines of code have time complexity of 1
+    
+Time Complexity: O(n2) 
+	
+
+
+
+
